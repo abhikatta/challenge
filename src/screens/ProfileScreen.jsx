@@ -13,8 +13,8 @@ const ProfileScreen = () => {
         </TouchableOpacity>
         <Text style={profileStyle.headerTitle}>Profile</Text>
         <View style={profileStyle.messages}>
-          <Text style={profileStyle.messageCount}>{data.newMessages}</Text>
           <TouchableOpacity>
+            <Text style={profileStyle.messageCount}>{data.newMessages}</Text>
             <Image source={require('../assets/profileScreen/commentAlt.png')} />
           </TouchableOpacity>
         </View>
@@ -49,7 +49,36 @@ const ProfileScreen = () => {
         <Text style={{color: '#727682', marginLeft: 10}}>Logout</Text>
       </TouchableOpacity>
       {/* stats */}
-      <View></View>
+      <View style={profileStyle.yellowStarThing}>
+        <Image
+          source={require('../assets/profileScreen/yellowStarThing.png')}
+        />
+      </View>
+      <View style={profileStyle.stats}>
+        <View style={profileStyle.statistic}>
+          <Text style={profileStyle.statsTitle}>{data.stats1Title}</Text>
+          <View style={profileStyle.innerStatistic}>
+            <Image
+              source={require('../assets/profileScreen/downArrowRed.png')}
+            />
+            <Text style={profileStyle.statsPercentage}>
+              {data.stats1Percentage}%
+            </Text>
+          </View>
+        </View>
+        <View style={profileStyle.statistic}>
+          <Text style={profileStyle.statsTitle}>{data.stats2Title}</Text>
+          <View style={profileStyle.innerStatistic}>
+            <Image
+              source={require('../assets/profileScreen/upArrowGreen.png')}
+            />
+            <Text style={profileStyle.statsPercentage}>
+              {data.stats2Percentage}%
+            </Text>
+          </View>
+        </View>
+        <Text>{data.stats1}</Text>
+      </View>
     </View>
   );
 };
