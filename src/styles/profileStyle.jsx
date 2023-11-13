@@ -1,10 +1,9 @@
 const {StyleSheet} = require('react-native');
 
 const profileStyle = StyleSheet.create({
-  container: {flex: 1},
+  container: {flex: 1, backgroundColor: 'rgba(98, 49, 173, 0.06)'},
   headerContainer: {
     justifyContent: 'space-between',
-
     alignItems: 'center',
     flexDirection: 'row',
     paddingVertical: '20%',
