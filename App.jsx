@@ -16,6 +16,7 @@ const App = () => {
     <NavigationContainer independent={true}>
       <BottomTabNavigator.Navigator
         screenOptions={{
+          headerShown: false,
           tabBarHideOnKeyboard: true,
           tabBarIconStyle: {
             top: '10%',
