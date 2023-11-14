@@ -12,26 +12,28 @@ import PersonIcon from '../assets/researchScreen/PersonIcon';
 import ChartIcon from '../assets/researchScreen/ChartIcon';
 
 const ResearchScreen = () => {
-  const [underWidth, setUnderWidth] = useState(null);
-  const [overWidth, setOverWidth] = useState(null);
+  const [underWidth, setUnderWidth] = useState(0);
+  const [overWidth, setOverWidth] = useState(0);
+
   useEffect(() => {
+    // calc correct with for the bar
+    const totalWidth = 100;
+
     const ratioUnder =
       researchData.noOfPlayersPredictedUnder / researchData.totalPlayers;
-    const underLineWidth = ratioUnder * 100;
+    const underLineWidth = ratioUnder * totalWidth;
+
     const ratioOver =
       researchData.noOfPlayersPredictedAbove / researchData.totalPlayers;
-    const overLineWidth = ratioOver * 100;
-
-    console.log(`${underWidth + overWidth}%`);
-    console.log(underLineWidth + overLineWidth);
+    const overLineWidth = ratioOver * totalWidth;
 
     setUnderWidth(underLineWidth);
-
     setOverWidth(overLineWidth);
   }, [
     researchData.noOfPlayersPredictedAbove,
     researchData.noOfPlayersPredictedUnder,
   ]);
+
   return (
     <View style={{backgroundColor: 'white'}}>
       <Text style={ResearchScreenStyle.Title}>Today's Games</Text>
@@ -154,35 +156,81 @@ const ResearchScreen = () => {
           <View
             style={{
               flexDirection: 'row',
+              width: 233,
+              justifyContent: 'space-around',
             }}>
-            <View style={researchStyle.bottomCardTotalChart}>
+            <View
+              style={[
+                researchStyle.bottomCardTotalChart,
+                {marginRight: 47.5, left: -15},
+              ]}>
               <PersonIcon />
               <Text style={{color: 'black', marginLeft: 8}}>
-                {researchData.totalPlayers}
+                {researchData.totalPlayers} Players
               </Text>
             </View>
-            <View style={researchStyle.bottomCardTotalChart}>
+            <View
+              style={[
+                researchStyle.bottomCardTotalChart,
+                {marginLeft: 47.5, right: -15},
+              ]}>
               <ChartIcon />
               <Text style={{color: 'black', marginLeft: 8}}>View chart</Text>
             </View>
           </View>
-
           <View
-            style={[researchStyle.bar, {width: `${underWidth + overWidth}%`}]}>
-            <View
-              style={{
-                borderColor: 'red',
-                height: 2,
-                borderWidth: 2,
-                width: underWidth,
-              }}></View>
-            <View
-              style={{
-                borderColor: 'blue',
-                height: 2,
-                borderWidth: 2,
-                width: overWidth,
-              }}></View>
+            style={{
+              justifyContent: 'center',
+              alignItems: 'center',
+              flexDirection: 'column',
+              flex: 1,
+            }}>
+            <View style={{flexDirection: 'row', width: 311}}>
+              <View
+                style={{
+                  borderColor: '#FE4190',
+                  height: 10,
+                  borderWidth: 1,
+                  backgroundColor: '#FE4190',
+                  borderTopLeftRadius: 10,
+                  borderBottomLeftRadius: 10,
+                  width: `${underWidth}%`,
+                }}
+              />
+              <View
+                style={{
+                  borderColor: '#2DABAD',
+                  height: 10,
+                  borderWidth: 1,
+                  backgroundColor: '#2DABAD',
+                  borderTopRightRadius: 10,
+                  borderBottomRightRadius: 10,
+                  width: `${overWidth}%`,
+                }}
+              />
+            </View>
+          </View>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              bottom: 20,
+            }}>
+            <Text
+              style={[
+                researchStyle.predictionStat,
+                {marginRight: 39, marginLeft: 15},
+              ]}>
+              {researchData.noOfPlayersPredictedUnder} predicted under
+            </Text>
+            <Text
+              style={[
+                researchStyle.predictionStat,
+                {marginLeft: 39, marginRight: 15},
+              ]}>
+              {researchData.noOfPlayersPredictedAbove} predicted over
+            </Text>
           </View>
         </View>
       </View>

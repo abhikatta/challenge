@@ -191,7 +191,6 @@ const researchStyle = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center',
     alignItems: 'center',
-    backgroundColor: 'yellow',
     flexDirection: 'column',
     position: 'absolute',
     width: 341,
@@ -199,14 +198,19 @@ const researchStyle = StyleSheet.create({
   },
   bottomCardTotalChart: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-
-    width: 'auto',
-    paddingHorizontal: 10,
+    width: 101,
     alignItems: 'center',
   },
   bar: {
     flexDirection: 'row',
+  },
+  predictionStat: {
+    color: '#B5C0C8',
+    // font-family: Montserrat;
+    fontSize: 12,
+    fontStyle: 'normal',
+    fontWeight: '500',
+    // line-height:'normal';
   },
 });
 export default researchStyle;
