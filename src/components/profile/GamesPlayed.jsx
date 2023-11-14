@@ -3,7 +3,13 @@ import React from 'react';
 
 const GamesPlayed = () => {
   return (
-    <View>
+    <View
+      style={{
+        width: '100%',
+        height: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
       <Text
         style={{
           color: 'black',

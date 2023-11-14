@@ -1,7 +1,7 @@
 import {View, Text, ScrollView} from 'react-native';
 import React from 'react';
 import homeStyle from '../../styles/homeStyle';
-import data from '../data';
+import data from './profiledata';
 import AchievementIcon from '../../assets/profileScreen/achievementImg.svg';
 const Badges = ({fromProfile}) => {
   const acheivementsTitles = [...data.acheivements.title];

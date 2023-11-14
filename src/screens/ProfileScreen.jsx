@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 import profileStyle from '../styles/profileStyle';
-import data from '../components/data';
+import data from '../components/profile/profiledata';
 
 import SpartanIcon from '../assets/profileScreen/spartanIcon.svg';
 import CommentAltIcon from '../assets/profileScreen/commentAlt.svg';
