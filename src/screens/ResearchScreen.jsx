@@ -40,7 +40,11 @@ const ResearchScreen = () => {
   ]);
 
   return (
-    <View style={{backgroundColor: 'white'}}>
+    <View
+      style={{
+        backgroundColor: 'rgba(0,0,0,0.4)',
+        opacity: popUpClicked ? 0.4 : 1,
+      }}>
       <Text style={ResearchScreenStyle.Title}>Today's Games</Text>
       <View style={ResearchScreenStyle.cardContainer}>
         <LinearGradient
@@ -252,7 +256,11 @@ const ResearchScreen = () => {
           </View>
         </View>
       </View>
-      {popUpClicked && <PopUpComponent />}
+
+      <PopUpComponent
+        isOpen={popUpClicked}
+        handlePopUpComponent={handlePopUpComponent}
+      />
     </View>
   );
 };

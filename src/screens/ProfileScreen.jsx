@@ -20,7 +20,7 @@ import SignOutIcon from '../assets/profileScreen/signOutIcon.svg';
 import Badges from '../components/profile/Badges';
 import GamesPlayed from '../components/profile/GamesPlayed';
 const ProfileScreen = () => {
-  const [subScreen, setSubScreen] = useState(null);
+  const [subScreen, setSubScreen] = useState('gamesplayed');
   const handleGamesPlayedScreen = () => {
     setSubScreen('gamesplayed');
   };

@@ -3,8 +3,14 @@ import React from 'react';
 
 const LeaguesScreen = () => {
   return (
-    <View>
-      <Text>LeaguesScreen</Text>
+    <View
+      style={{
+        flexDirection: 'column',
+        justifyContent: 'center',
+        top: '50%',
+        alignSelf: 'center',
+      }}>
+      <Text style={{color: 'black'}}>This is the Leagues Screen.</Text>
     </View>
   );
 };

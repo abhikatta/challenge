@@ -3,8 +3,14 @@ import React from 'react';
 
 const LeaderBoardScreen = () => {
   return (
-    <View>
-      <Text>LeaderBoardScreen</Text>
+    <View
+      style={{
+        flexDirection: 'column',
+        justifyContent: 'center',
+        top: '50%',
+        alignSelf: 'center',
+      }}>
+      <Text style={{color: 'black'}}>This is the LeaderBoard Screen</Text>
     </View>
   );
 };
