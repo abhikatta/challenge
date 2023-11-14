@@ -16,8 +16,7 @@ const HomeScreen = () => {
           tabBarActiveTintColor: '#6231AD',
           tabBarIconStyle: {
             position: 'absolute',
-            bottom: 0,
-            // marginBottom: 10,
+
             marginTop: Platform.OS === 'ios' ? 5 : 10,
           },
           tabBarLabelStyle: {
@@ -37,15 +36,13 @@ const HomeScreen = () => {
         }}>
         <BottomTabNavigator.Screen
           options={{
-            unmountOnBlur: true,
             tabBarIcon: ({focused}) => (
               <View
                 style={{
-                  borderWidth: focused ? 1 : 0,
+                  borderWidth: focused ? 1.5 : 0,
                   width: 187.5,
-
+                  bottom: 0.75,
                   borderColor: focused ? '#6231AD' : '',
-                  height: 2,
                 }}></View>
             ),
           }}
@@ -54,13 +51,13 @@ const HomeScreen = () => {
         />
         <BottomTabNavigator.Screen
           options={{
-            // unmountOnBlur: true,
             tabBarIcon: ({focused}) => (
               <View
                 style={{
-                  borderWidth: focused ? 1 : 0,
-                  borderColor: focused ? '#6231AD' : '',
+                  borderWidth: focused ? 1.5 : 0,
                   width: 187.5,
+                  bottom: 0.75,
+                  borderColor: focused ? '#6231AD' : '',
                 }}></View>
             ),
           }}

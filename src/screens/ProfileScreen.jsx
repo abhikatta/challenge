@@ -16,14 +16,12 @@ const ProfileScreen = () => {
       {/* header */}
       <View style={profileStyle.headerContainer}>
         <TouchableOpacity>
-          {/* <Image source={require('../assets/profileScreen/spartanIcon.png')} /> */}
           <SpartanIcon />
         </TouchableOpacity>
         <Text style={profileStyle.headerTitle}>Profile</Text>
         <View style={profileStyle.messages}>
           <TouchableOpacity>
             <Text style={profileStyle.messageCount}>{data.newMessages}</Text>
-            {/* <Image source={require('../assets/profileScreen/commentAlt.png')} /> */}
             <CommentAltIcon />
           </TouchableOpacity>
         </View>
@@ -38,7 +36,6 @@ const ProfileScreen = () => {
         <TouchableOpacity>
           <View style={profileStyle.editPFPButton}>
             <View style={profileStyle.editPFP}>
-              {/* <Image source={require('../assets/profileScreen/edit.png')} /> */}
               <EditIcon />
             </View>
           </View>
@@ -54,25 +51,18 @@ const ProfileScreen = () => {
         }}
         style={profileStyle.logoutButton}>
         <TouchableOpacity>
-          {/* <Image source={require('../assets/profileScreen/signOut.png')} /> */}
           <SignOutIcon />
         </TouchableOpacity>
         <Text style={{color: '#727682', marginLeft: 10}}>Logout</Text>
       </TouchableOpacity>
       {/* stats */}
       <View style={profileStyle.yellowStarThing}>
-        {/* <Image
-          source={require('../assets/profileScreen/yellowStarThing.png')}
-        /> */}
         <YellowStarThingIcon />
       </View>
       <View style={profileStyle.stats}>
         <View style={profileStyle.statistic}>
           <Text style={profileStyle.statsTitle}>{data.stats1Title}</Text>
           <View style={profileStyle.innerStatistic}>
-            {/* <Image
-              source={require('../assets/profileScreen/downArrowRed.png')}
-            /> */}
             <DownArrowRedIcon />
             <Text style={profileStyle.statsPercentage}>
               {data.stats1Percentage}%
@@ -83,9 +73,6 @@ const ProfileScreen = () => {
           <Text style={profileStyle.statsTitle}>{data.stats2Title}</Text>
           <View style={profileStyle.innerStatistic}>
             <UpArrowGreenIcon />
-            {/* <Image
-              source={require('../assets/profileScreen/upArrowGreen.png')}
-            /> */}
             <Text style={profileStyle.statsPercentage}>
               {data.stats2Percentage}%
             </Text>

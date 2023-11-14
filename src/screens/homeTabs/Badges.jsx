@@ -1,8 +1,8 @@
-import {View, Text, Image, ScrollView} from 'react-native';
+import {View, Text, ScrollView} from 'react-native';
 import React from 'react';
 import homeStyle from '../../styles/homeStyle';
 import data from '../../components/data';
-
+import AchievementIcon from '../../assets/profileScreen/achievementImg.svg';
 const Badges = () => {
   const acheivementsTitles = [...data.acheivements.title];
   const acheivementsContent = [...data.acheivements.content];
@@ -13,9 +13,7 @@ const Badges = () => {
         {acheivementsTitles.map((v, i) => {
           return (
             <View style={homeStyle.cardContainer} key={i}>
-              <Image
-                source={require('../../assets/homeScreen/achievementImg.png')}
-              />
+              <AchievementIcon />
               <View style={homeStyle.cardTextContainer}>
                 <Text style={homeStyle.acheivementsTitle}>
                   {v}
