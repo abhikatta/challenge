@@ -10,7 +10,7 @@ const GamesPlayed = () => {
           paddingTop: '50%',
           textAlign: 'center',
         }}>
-        This is the games played.
+        This is the games played screen.
       </Text>
     </View>
   );
