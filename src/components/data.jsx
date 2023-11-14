@@ -18,6 +18,7 @@ export default {
       'Top 10% of highest spending players in a month',
       'Top 10% of highest spending players in a month',
     ],
+    achieved: [3, 1, 1, 1, 1, 1, 1],
   },
   newMessages: 1,
   name: 'Jina Simons',
