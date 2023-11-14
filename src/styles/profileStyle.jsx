@@ -14,7 +14,12 @@ const profileStyle = StyleSheet.create({
     width: '94%',
     height: 'auto',
   },
-  headerTitle: {color: '#727682'},
+  headerTitle: {
+    color: '#727682',
+    fontFamily: 'Montserrat',
+    textAlign: 'center',
+    fontWeight: '500',
+  },
   profileImg: {width: 75, height: 75, borderRadius: 75},
   messages: {
     flexDirection: 'column',
@@ -37,6 +42,7 @@ const profileStyle = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    fontFamily: 'Montserrat',
   },
   editPFPButton: {
     marginLeft: 45,
@@ -66,7 +72,7 @@ const profileStyle = StyleSheet.create({
   description: {
     width: 343,
     color: '#727682',
-    // fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat',
     fontSize: 14,
     fontStyle: 'normal',
     fontWeight: '500',
@@ -78,6 +84,7 @@ const profileStyle = StyleSheet.create({
     alignItems: 'center',
     marginVertical: 15,
     justifyContent: 'center',
+    fontFamily: 'Montserrat',
     flexDirection: 'row',
   },
   stats: {
@@ -87,6 +94,7 @@ const profileStyle = StyleSheet.create({
     borderRadius: 5,
     paddingVertical: 20,
     paddingHorizontal: 20,
+    fontFamily: 'Montserrat',
     borderWidth: 1,
     width: '90%',
     alignSelf: 'center',
@@ -95,10 +103,12 @@ const profileStyle = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'space-between',
     marginHorizontal: 20,
+    fontFamily: 'Montserrat',
   },
   statsTitle: {
     flexDirection: 'column',
     textAlign: 'center',
+    fontFamily: 'Montserrat',
     marginHorizontal: 10,
     color: 'black',
   },
@@ -106,10 +116,17 @@ const profileStyle = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 20,
+    fontFamily: 'Montserrat',
     justifyContent: 'center',
     marginVertical: 10,
   },
-  statsPercentage: {color: 'black', fontSize: 24, marginLeft: 10},
+  statsPercentage: {
+    color: 'black',
+    fontSize: 24,
+    fontFamily: 'Montserrat',
+    fontWeight: '700',
+    marginLeft: 10,
+  },
   //
   achievementsButtonContainer: {
     flexDirection: 'row',

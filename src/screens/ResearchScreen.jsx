@@ -10,13 +10,18 @@ import researchStyle from '../styles/researchStyle';
 import ArrowIcon from '../assets/researchScreen/ArrowIcon';
 import PersonIcon from '../assets/researchScreen/PersonIcon';
 import ChartIcon from '../assets/researchScreen/ChartIcon';
+import PopUpComponent from '../components/research/PopUpComponent';
 
 const ResearchScreen = () => {
   const [underWidth, setUnderWidth] = useState(0);
   const [overWidth, setOverWidth] = useState(0);
+  const [popUpClicked, setPopUpClicked] = useState(false);
+  const handlePopUpComponent = () => {
+    setPopUpClicked(prev => !prev);
+  };
 
   useEffect(() => {
-    // calc correct with for the bar
+    // calcs the correct width for the bar in proportions
     const totalWidth = 100;
 
     const ratioUnder =
@@ -140,6 +145,7 @@ const ResearchScreen = () => {
             <Text style={researchStyle.predictionButtonText}>Under</Text>
           </TouchableOpacity>
           <TouchableOpacity
+            onPress={handlePopUpComponent}
             style={[
               researchStyle.predictionButton,
               {
@@ -165,7 +171,12 @@ const ResearchScreen = () => {
                 {marginRight: 47.5, left: -15},
               ]}>
               <PersonIcon />
-              <Text style={{color: 'black', marginLeft: 8}}>
+              <Text
+                style={{
+                  color: 'black',
+                  fontFamily: 'Montserrat',
+                  marginLeft: 8,
+                }}>
                 {researchData.totalPlayers} Players
               </Text>
             </View>
@@ -175,7 +186,14 @@ const ResearchScreen = () => {
                 {marginLeft: 47.5, right: -15},
               ]}>
               <ChartIcon />
-              <Text style={{color: 'black', marginLeft: 8}}>View chart</Text>
+              <Text
+                style={{
+                  color: 'black',
+                  marginLeft: 8,
+                  fontFamily: 'Montserrat',
+                }}>
+                View chart
+              </Text>
             </View>
           </View>
           <View
@@ -234,6 +252,7 @@ const ResearchScreen = () => {
           </View>
         </View>
       </View>
+      {popUpClicked && <PopUpComponent />}
     </View>
   );
 };

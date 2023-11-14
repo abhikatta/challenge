@@ -23,7 +23,8 @@ const researchStyle = StyleSheet.create({
     height: 22,
     marginRight: 248,
     marginBottom: 790,
-    // font-family: Avenir Next,
+    fontFamily: 'Avenir Roman',
+
     fontSize: 16,
     fontStyle: 'normal',
     fontWeight: '600',
@@ -34,7 +35,9 @@ const researchStyle = StyleSheet.create({
     paddingTop: 19,
     paddingRight: 219,
     paddingBottom: 70,
-    // font-family: Montserrat;
+
+    fontFamily: 'Montserrat',
+
     position: 'absolute',
     fontSize: 12,
     fontStyle: 'normal',
@@ -47,12 +50,11 @@ const researchStyle = StyleSheet.create({
     paddingTop: 19,
     paddingRight: 98,
     paddingBottom: 70,
-    // font-family: Montserrat;
+    fontFamily: 'Montserrat',
     position: 'absolute',
     fontSize: 12,
     fontStyle: 'normal',
     fontWeight: '500',
-
     textAlign: 'right',
   },
   cardStartingIn: {
@@ -61,7 +63,7 @@ const researchStyle = StyleSheet.create({
     paddingTop: 19,
     paddingRight: 15,
     paddingBottom: 70,
-    // font-family: Montserrat;
+    fontFamily: 'Montserrat',
     position: 'absolute',
     fontSize: 12,
     fontStyle: 'normal',
@@ -85,7 +87,7 @@ const researchStyle = StyleSheet.create({
   },
   bitcoinDescriptionContainer: {
     paddingLeft: 15,
-
+    fontFamily: 'Montserrat',
     paddingTop: 50,
     paddingRight: 98,
     paddingBottom: 16,
@@ -101,11 +103,10 @@ const researchStyle = StyleSheet.create({
   },
   timing: {
     color: '#FFF',
-    // font-family: Montserrat,
+    fontFamily: 'Montserrat',
     fontSize: 14,
     fontStyle: 'normal',
     fontWeight: '500',
-    lineHeight: 19,
   },
   headerCardContainer: {
     borderTopLeftRadius: 4,
@@ -125,7 +126,7 @@ const researchStyle = StyleSheet.create({
   descriptionHeader: {
     color: '#B5C0C8',
     textAlign: 'center',
-    // font-family: Montserrat,
+    fontFamily: 'Montserrat',
     fontSize: 12,
     fontStyle: 'normal',
     fontWeight: '500',
@@ -134,15 +135,14 @@ const researchStyle = StyleSheet.create({
   descriptionContent: {
     color: '#333',
     textAlign: 'center',
-    // font-family: Montserrat,
+    fontFamily: 'AvenirNext',
     fontSize: 14,
     fontStyle: 'normal',
     fontWeight: '600',
-    // line-height: noral,
   },
   predictionQuestion: {
     color: '#727682',
-    // fontFamily: Montserrat,
+    fontFamily: 'Montserrat',
     fontSize: 14,
     paddingTop: 187,
     paddingLeft: 15,
@@ -177,11 +177,10 @@ const researchStyle = StyleSheet.create({
   predictionButtonText: {
     marginHorizontal: 4,
     color: '#FFF',
-    // font-family: Montserrat
+    fontFamily: 'Montserrat',
     fontSize: 14,
     fontStyle: 'normal',
     fontWeight: '600',
-    // line-height: normal;
   },
   bottomCardContainer: {
     marginTop: 278,
@@ -206,7 +205,8 @@ const researchStyle = StyleSheet.create({
   },
   predictionStat: {
     color: '#B5C0C8',
-    // font-family: Montserrat;
+    fontFamily: 'Montserrat',
+
     fontSize: 12,
     fontStyle: 'normal',
     fontWeight: '500',

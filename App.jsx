@@ -26,33 +26,30 @@ const App = () => {
       <BottomTabNavigator.Navigator
         screenOptions={{
           tabBarStyle: {
-            display: 'flex',
-            minWidth: 375,
             width: 'auto',
-            height: 62,
+            height: 65,
             flexDirection: 'column',
             alignItems: 'center',
-            gap: 21,
+            gap: 18,
             flexShrink: 0,
           },
           headerShown: false,
           tabBarHideOnKeyboard: true,
           tabBarIconStyle: {
-            top: '10%',
-            padding: '10%',
-            marginBottom: '10%',
+            justifyContent: 'center',
             color: '#6231AD',
-
             marginTop: Platform.OS === 'ios' ? '5%' : '10%',
-          },
-          tabBarLabelStyle: {
-            bottom: '-10%',
           },
           tabBarActiveTintColor: '#6231AD',
           tabBarInactiveTintColor: '#B5C0C8',
         }}>
         <BottomTabNavigator.Screen
           options={{
+            tabBarLabelStyle: {
+              fontFamily: 'Montserrat',
+              fontWeight: '500',
+              marginTop: 7,
+            },
             tabBarIcon: ({focused}) => (
               <View>
                 <HomeScreenIcon fillColor={focused ? '#6231AD' : '#B5C0C8'} />
@@ -64,6 +61,11 @@ const App = () => {
         />
         <BottomTabNavigator.Screen
           options={{
+            tabBarLabelStyle: {
+              fontFamily: 'Montserrat',
+              fontWeight: '500',
+              marginTop: 7,
+            },
             tabBarIcon: ({focused}) => (
               <View>
                 <LeaguesScreenIcon
@@ -77,6 +79,11 @@ const App = () => {
         />
         <BottomTabNavigator.Screen
           options={{
+            tabBarLabelStyle: {
+              fontFamily: 'Montserrat',
+              fontWeight: '500',
+              marginTop: 7,
+            },
             tabBarIcon: ({focused}) => (
               <View>
                 <ResearchScreenIcon
@@ -90,6 +97,11 @@ const App = () => {
         />
         <BottomTabNavigator.Screen
           options={{
+            tabBarLabelStyle: {
+              fontFamily: 'Montserrat',
+              fontWeight: '500',
+              marginTop: 7,
+            },
             tabBarIcon: ({focused}) => (
               <View>
                 <LeaderBoardScreenIcon
@@ -103,6 +115,11 @@ const App = () => {
         />
         <BottomTabNavigator.Screen
           options={{
+            tabBarLabelStyle: {
+              fontFamily: 'Montserrat',
+              fontWeight: '500',
+              marginTop: 7,
+            },
             tabBarIcon: ({focused}) => (
               <View>
                 <ProfileScreenIcon

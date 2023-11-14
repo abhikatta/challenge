@@ -25,11 +25,13 @@ const homeStyle = StyleSheet.create({
     fontStyle: 'normal',
     fontWeight: '600',
     marginBottom: 8,
+    fontFamily: 'Montserrat',
     marginRight: 4,
   },
   acheivementTimesAchieved: {
     color: '#FFA600',
-    // font-family: Montserrat;
+    fontFamily: 'Montserrat',
+
     fontSize: 14,
     fontStyle: 'normal',
     fontWeight: '600',
@@ -37,8 +39,9 @@ const homeStyle = StyleSheet.create({
   acheivementsContent: {
     textAlign: 'left',
     color: '#727682',
-    // add later:
-    // font-family: Montserrat;
+
+    fontFamily: 'Montserrat',
+
     fontSize: 14,
     fontStyle: 'normal',
     fontWeight: '500',

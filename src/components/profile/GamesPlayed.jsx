@@ -7,7 +7,8 @@ const GamesPlayed = () => {
       style={{
         width: '100%',
         height: '100%',
-        justifyContent: 'center',
+        // justifyContent: 'center',
+        paddingVertical: 70,
         alignItems: 'center',
       }}>
       <Text

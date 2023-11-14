@@ -49,7 +49,6 @@ const ProfileScreen = () => {
             style={profileStyle.profileImg}
             source={require('../assets/profileScreen/profileImg.png')}
           />
-
           <TouchableOpacity>
             <View style={profileStyle.editPFPButton}>
               <View style={profileStyle.editPFP}>
@@ -57,8 +56,12 @@ const ProfileScreen = () => {
               </View>
             </View>
           </TouchableOpacity>
-          <Text style={{color: '#333'}}>{data.name}</Text>
-          <Text style={{color: '#727682'}}>{data.points}</Text>
+          <Text style={{color: '#333', fontFamily: 'Montserrat'}}>
+            {data.name}
+          </Text>
+          <Text style={{color: '#727682', fontFamily: 'Montserrat'}}>
+            {data.points}
+          </Text>
           <Text style={profileStyle.description}>{data.description}</Text>
         </View>
         {/* logoutbutton */}
@@ -70,7 +73,14 @@ const ProfileScreen = () => {
           <TouchableOpacity>
             <SignOutIcon />
           </TouchableOpacity>
-          <Text style={{color: '#727682', marginLeft: 10}}>Logout</Text>
+          <Text
+            style={{
+              color: '#727682',
+              marginLeft: 10,
+              fontFamily: 'Montserrat',
+            }}>
+            Logout
+          </Text>
         </TouchableOpacity>
         {/* stats */}
         <View style={profileStyle.yellowStarThing}>

@@ -16,15 +16,9 @@ const HomeScreen = () => {
           tabBarActiveTintColor: '#6231AD',
           tabBarIconStyle: {
             position: 'absolute',
-
-            marginTop: Platform.OS === 'ios' ? 5 : 10,
           },
           tabBarLabelStyle: {
-            height: 'auto',
-            top: 0,
-            paddingVertical: 20,
-            flexDirection: 'column',
-            width: 100,
+            position: 'absolute',
           },
           tabBarStyle: {
             position: 'absolute',
@@ -36,6 +30,13 @@ const HomeScreen = () => {
         }}>
         <BottomTabNavigator.Screen
           options={{
+            tabBarLabelStyle: {
+              fontFamily: 'Montserrat',
+              flexDirection: 'column',
+              paddingBottom: 20,
+              fontSize: 14,
+              fontWeight: '500',
+            },
             tabBarIcon: ({focused}) => (
               <View
                 style={{
@@ -51,6 +52,12 @@ const HomeScreen = () => {
         />
         <BottomTabNavigator.Screen
           options={{
+            tabBarLabelStyle: {
+              fontFamily: 'Montserrat',
+              paddingBottom: 20,
+              fontSize: 14,
+              fontWeight: '500',
+            },
             tabBarIcon: ({focused}) => (
               <View
                 style={{
