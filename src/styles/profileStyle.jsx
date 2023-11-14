@@ -1,12 +1,15 @@
 const {StyleSheet} = require('react-native');
 
 const profileStyle = StyleSheet.create({
-  container: {flex: 1, backgroundColor: 'rgba(98, 49, 173, 0.06)'},
+  container: {
+    flex: 1,
+    backgroundColor: 'rgba(98, 49, 173, 0.06)',
+  },
   headerContainer: {
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',
-    paddingVertical: '20%',
+    paddingVertical: 20,
     marginHorizontal: '3%',
     width: '94%',
     height: 'auto',
@@ -107,6 +110,24 @@ const profileStyle = StyleSheet.create({
     marginVertical: 10,
   },
   statsPercentage: {color: 'black', fontSize: 24, marginLeft: 10},
+  //
+  achievementsButtonContainer: {
+    flexDirection: 'row',
+    height: 100,
+    alignItems: 'center',
+  },
+
+  achievementsButton: {
+    width: '50%',
+    height: 'auto',
+    justifyContent: 'flex-end',
+    alignSelf: 'flex-end',
+  },
+  achievementsButtonText: {
+    color: 'black',
+    paddingVertical: 20,
+    textAlign: 'center',
+  },
 });
 
 export default profileStyle;

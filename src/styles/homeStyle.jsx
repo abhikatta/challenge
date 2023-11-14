@@ -5,7 +5,6 @@ const homeStyle = StyleSheet.create({
     flex: 1,
     // converted opacity + bg color to rgba since opactity directly affects whole content too
     backgroundColor: 'rgba(98, 49, 173, 0.06)',
-    paddingTop: 60,
     alignItems: 'center',
   },
   cardContainer: {

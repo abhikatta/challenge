@@ -1,14 +1,15 @@
 import {View, Text, ScrollView} from 'react-native';
 import React from 'react';
 import homeStyle from '../../styles/homeStyle';
-import data from '../../components/data';
+import data from '../data';
 import AchievementIcon from '../../assets/profileScreen/achievementImg.svg';
-const Badges = () => {
+const Badges = ({fromProfile}) => {
   const acheivementsTitles = [...data.acheivements.title];
   const acheivementsContent = [...data.acheivements.content];
   const acheivementTimesAchieved = [...data.acheivements.achieved];
   return (
-    <View style={homeStyle.container}>
+    // workaround for vertical rendering bug in homescreen
+    <View style={[homeStyle.container, {paddingTop: fromProfile ? '' : 60}]}>
       <ScrollView scrollToOverflowEnabled={true}>
         {acheivementsTitles.map((v, i) => {
           return (

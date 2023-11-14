@@ -7,7 +7,6 @@ const GamesPlayed = () => {
       <Text
         style={{
           color: 'black',
-          paddingTop: '50%',
           textAlign: 'center',
         }}>
         This is the games played screen.

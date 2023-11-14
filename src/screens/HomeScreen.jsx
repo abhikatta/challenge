@@ -1,7 +1,7 @@
 import React from 'react';
-import Badges from './homeTabs/Badges';
+import Badges from '../components/profile/Badges';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import GamesPlayed from './homeTabs/GamesPlayed';
+import GamesPlayed from '../components/profile/GamesPlayed';
 import {NavigationContainer} from '@react-navigation/native';
 import {View} from 'react-native';
 

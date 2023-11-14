@@ -1,18 +1,18 @@
 import React from 'react';
+
+import {View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+
+// screens:
 import HomeScreen from './src/screens/HomeScreen';
 import LeaguesScreen from './src/screens/LeaguesScreen';
 import ResearchScreen from './src/screens/ResearchScreen';
 import LeaderBoardScreen from './src/screens/LeaderBoardScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 
-import {NavigationContainer} from '@react-navigation/native';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-
-import {Image, View} from 'react-native';
-import Screen1 from './src/screens/Screen1';
-
 // svg icons:
-// import HomeScreenIcon from './src/assets/bottomTabIcons/homeIcon.svg';
+
 import HomeScreenIcon from './src/assets/bottomTabIcons/HomeIcon';
 import LeaguesScreenIcon from './src/assets/bottomTabIcons/LeaguesIcon';
 import ResearchScreenIcon from './src/assets/bottomTabIcons/ResearchIcon';
@@ -25,6 +25,16 @@ const App = () => {
     <NavigationContainer independent={true}>
       <BottomTabNavigator.Navigator
         screenOptions={{
+          tabBarStyle: {
+            display: 'flex',
+            minWidth: 375,
+            width: 'auto',
+            height: 62,
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: 21,
+            flexShrink: 0,
+          },
           headerShown: false,
           tabBarHideOnKeyboard: true,
           tabBarIconStyle: {
@@ -36,8 +46,7 @@ const App = () => {
             marginTop: Platform.OS === 'ios' ? '5%' : '10%',
           },
           tabBarLabelStyle: {
-            bottom: '10%',
-            width: 100,
+            bottom: '-10%',
           },
           tabBarActiveTintColor: '#6231AD',
           tabBarInactiveTintColor: '#B5C0C8',
