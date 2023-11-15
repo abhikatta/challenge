@@ -27,6 +27,6 @@ export default {
     "I'm a software developer that has been in the crypto space since 2012. And I've seen it grow and falter over a period of time. Really happy to be here!",
   stats1Title: 'Under or Over',
   stats2Title: 'Top 5',
-  stats1Percentage: 81,
-  stats2Percentage: -51,
+  stats1Percentage: '81%',
+  stats2Percentage: '-51%',
 };

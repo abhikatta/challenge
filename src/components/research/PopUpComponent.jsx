@@ -20,9 +20,23 @@ const PopUpComponent = ({isOpen, handlePopUpComponent}) => {
               <View style={{height: 60}}></View>
 
               <View style={popUpComponentStyle.ticketContainer}>
-                {[...Array(arrLen)].map((_, index) => (
+                {[...Array(arrLen - 5)].map((_, index) => (
                   <View key={index} style={popUpComponentStyle.ticket}>
-                    <Text style={{color: 'black'}}>{index + 1}</Text>
+                    <Text style={{color: 'black', height: 12, width: 'auto'}}>
+                      {index - 5}
+                    </Text>
+                    <Text style={{color: 'black', height: 15, width: 'auto'}}>
+                      {index - 4}
+                    </Text>
+                    <Text style={{color: 'black', height: 29, width: 'auto'}}>
+                      {index - 3}
+                    </Text>
+                    <Text style={{color: 'black', height: 15, width: 'auto'}}>
+                      {index - 2}
+                    </Text>
+                    <Text style={{color: 'black', height: 12, width: 'auto'}}>
+                      {index - 1}
+                    </Text>
                   </View>
                 ))}
               </View>

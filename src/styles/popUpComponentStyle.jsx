@@ -6,7 +6,8 @@ const popUpComponentStyle = StyleSheet.create({
     bottom: 70,
     left: 0,
     width: '100%',
-    height: 468,
+    backgroundColor: 'rgba(0,0,0,0.6)',
+    height: '100%',
   },
   title: {
     top: 14,

@@ -16,6 +16,7 @@ const ResearchScreen = () => {
   const [underWidth, setUnderWidth] = useState(0);
   const [overWidth, setOverWidth] = useState(0);
   const [popUpClicked, setPopUpClicked] = useState(false);
+
   const handlePopUpComponent = () => {
     setPopUpClicked(prev => !prev);
   };
@@ -40,11 +41,7 @@ const ResearchScreen = () => {
   ]);
 
   return (
-    <View
-      style={{
-        backgroundColor: 'rgba(0,0,0,0.4)',
-        opacity: popUpClicked ? 0.4 : 1,
-      }}>
+    <View>
       <Text style={ResearchScreenStyle.Title}>Today's Games</Text>
       <View style={ResearchScreenStyle.cardContainer}>
         <LinearGradient
@@ -138,6 +135,7 @@ const ResearchScreen = () => {
         </Text>
         <View style={researchStyle.predictionButtonContainer}>
           <TouchableOpacity
+            onPress={handlePopUpComponent}
             style={[
               researchStyle.predictionButton,
               {
@@ -257,10 +255,12 @@ const ResearchScreen = () => {
         </View>
       </View>
 
-      <PopUpComponent
-        isOpen={popUpClicked}
-        handlePopUpComponent={handlePopUpComponent}
-      />
+      {popUpClicked && (
+        <PopUpComponent
+          isOpen={popUpClicked}
+          handlePopUpComponent={handlePopUpComponent}
+        />
+      )}
     </View>
   );
 };

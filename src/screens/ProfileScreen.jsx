@@ -37,7 +37,8 @@ const ProfileScreen = () => {
           </TouchableOpacity>
           <Text style={profileStyle.headerTitle}>Profile</Text>
           <View style={profileStyle.messages}>
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => Alert.alert('', 'Messages button pressed.')}>
               <Text style={profileStyle.messageCount}>{data.newMessages}</Text>
               <CommentAltIcon />
             </TouchableOpacity>
@@ -49,7 +50,8 @@ const ProfileScreen = () => {
             style={profileStyle.profileImg}
             source={require('../assets/profileScreen/profileImg.png')}
           />
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => Alert.alert('', 'Edit button pressed.')}>
             <View style={profileStyle.editPFPButton}>
               <View style={profileStyle.editPFP}>
                 <EditIcon />
@@ -67,7 +69,7 @@ const ProfileScreen = () => {
         {/* logoutbutton */}
         <TouchableOpacity
           onPress={() => {
-            Alert.alert('', 'Yet to be implemented');
+            Alert.alert('', 'Logout button pressed.');
           }}
           style={profileStyle.logoutButton}>
           <TouchableOpacity>
@@ -92,7 +94,7 @@ const ProfileScreen = () => {
             <View style={profileStyle.innerStatistic}>
               <DownArrowRedIcon />
               <Text style={profileStyle.statsPercentage}>
-                {data.stats1Percentage}%
+                {data.stats1Percentage}
               </Text>
             </View>
           </View>
@@ -101,7 +103,7 @@ const ProfileScreen = () => {
             <View style={profileStyle.innerStatistic}>
               <UpArrowGreenIcon />
               <Text style={profileStyle.statsPercentage}>
-                {data.stats2Percentage}%
+                {data.stats2Percentage}
               </Text>
             </View>
           </View>

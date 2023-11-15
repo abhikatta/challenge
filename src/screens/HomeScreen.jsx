@@ -35,7 +35,7 @@ const HomeScreen = () => {
               flexDirection: 'column',
               paddingBottom: 20,
               fontSize: 14,
-              fontWeight: '500',
+              fontWeight: '600',
             },
             tabBarIcon: ({focused}) => (
               <View
@@ -56,7 +56,7 @@ const HomeScreen = () => {
               fontFamily: 'Montserrat',
               paddingBottom: 20,
               fontSize: 14,
-              fontWeight: '500',
+              fontWeight: '600',
             },
             tabBarIcon: ({focused}) => (
               <View
