@@ -1,22 +1,7 @@
-import {
-  View,
-  Image,
-  Text,
-  TouchableOpacity,
-  ScrollView,
-  Dimensions,
-} from 'react-native';
-import React, {useEffect, useState} from 'react';
+import {View, Text, ScrollView, Dimensions} from 'react-native';
+import React, {useState} from 'react';
 import ResearchScreenStyle from '../styles/researchStyle';
-import LinearGradient from 'react-native-linear-gradient';
-import ClockIcon from '../assets/researchScreen/clockIcon';
-import InfoIcon from '../assets/researchScreen/infoIcon';
-import EllipseIcon from '../assets/researchScreen/ellipseIcon.svg';
 import researchData from '../components/research/researchData';
-import researchStyle from '../styles/researchStyle';
-import ArrowIcon from '../assets/researchScreen/ArrowIcon';
-import PersonIcon from '../assets/researchScreen/PersonIcon';
-import ChartIcon from '../assets/researchScreen/ChartIcon';
 import PopUpComponent from '../components/research/PopUpComponent';
 import ResearchCardContainerComponent from '../components/research/ResearchCardContainerComponent';
 
@@ -35,22 +20,18 @@ const ResearchScreen = () => {
         scrollEnabled={scrollEnabled}
         style={{
           marginVertical: 51 / 2,
-          // marginTop: 51,
         }}>
-        <ResearchCardContainerComponent
-          researchData={researchData[0]}
-          handlePopUpComponent={handlePopUpComponent}
-        />
-
-        <ResearchCardContainerComponent
-          researchData={researchData[1]}
-          handlePopUpComponent={handlePopUpComponent}
-        />
-
-        <ResearchCardContainerComponent
-          researchData={researchData[2]}
-          handlePopUpComponent={handlePopUpComponent}
-        />
+        {/* this auto render components based on length of the length of the array in researchData */}
+        {[...Array(researchData.length)].map((_, i) => {
+          return (
+            <View key={i}>
+              <ResearchCardContainerComponent
+                researchData={researchData[i]}
+                handlePopUpComponent={handlePopUpComponent}
+              />
+            </View>
+          );
+        })}
       </ScrollView>
       {popUpClicked && (
         <PopUpComponent
