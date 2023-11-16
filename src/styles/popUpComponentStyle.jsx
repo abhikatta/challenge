@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 const popUpComponentStyle = StyleSheet.create({
   container: {
     position: 'absolute',
-    bottom: 70,
+    bottom: 35,
     left: 0,
     width: '100%',
     backgroundColor: 'rgba(0,0,0,0.6)',

@@ -3,7 +3,7 @@ import Badges from '../components/profile/Badges';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import GamesPlayed from '../components/profile/GamesPlayed';
 import {NavigationContainer} from '@react-navigation/native';
-import {View} from 'react-native';
+import {Dimensions, View} from 'react-native';
 
 const HomeScreen = () => {
   const BottomTabNavigator = createBottomTabNavigator();
@@ -41,8 +41,9 @@ const HomeScreen = () => {
               <View
                 style={{
                   borderWidth: focused ? 1.5 : 0,
-                  width: 187.5,
+                  width: Dimensions.get('window').width / 2,
                   bottom: 0.75,
+                  backgroundColor: focused ? '#6231AD' : '',
                   borderColor: focused ? '#6231AD' : '',
                 }}></View>
             ),
@@ -63,6 +64,9 @@ const HomeScreen = () => {
                 style={{
                   borderWidth: focused ? 1.5 : 0,
                   width: 187.5,
+                  width: Dimensions.get('window').width / 2,
+
+                  backgroundColor: focused ? '#6231AD' : '',
                   bottom: 0.75,
                   borderColor: focused ? '#6231AD' : '',
                 }}></View>

@@ -5,7 +5,7 @@ const researchStyle = StyleSheet.create({
     height: 389,
     marginHorizontal: 16,
     flexDirection: 'column',
-    marginTop: 51,
+
     position: 'absolute',
     marginBottom: 385,
     backgroundColor: '#FFF',
@@ -19,12 +19,10 @@ const researchStyle = StyleSheet.create({
     color: '#333',
     marginLeft: 16,
     marginTop: 13,
+    marginRight: 248,
     width: 'auto',
     height: 22,
-    marginRight: 248,
-    marginBottom: 790,
     fontFamily: 'Avenir Roman',
-
     fontSize: 16,
     fontStyle: 'normal',
     fontWeight: '600',
